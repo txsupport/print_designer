@@ -130,6 +130,7 @@ frappe.ui.form.PrintView = class PrintView extends frappe.ui.form.PrintView {
 			name: this.frm.doc.name,
 			format: this.selected_format(),
 			_lang: this.lang_code,
+			no_letterhead: this.with_letterhead() ? 0 : 1,
 		});
 		let url = `${
 			window.location.origin
